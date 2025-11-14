@@ -9,14 +9,14 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/user-service/**  
+            - Path=/users/**
           filters:
             - StripPrefix=1
 
         - id: product-service
           uri: lb://product-service
           predicates:
-            - Path=/product-service/**  
+            - Path=/products/**
           filters:
             - StripPrefix=1
 
